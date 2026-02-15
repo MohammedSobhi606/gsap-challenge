@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+
+    --font-sans: "Inter", sans-serif;
+    --font-serif: "Oswald", sans-serif;
+}
+
+.HPadding {
+    @apply px-4 sm:px-8 md:px-16
+}
+
+.maxW {
+    @apply max-w-7xl mx-auto
+}
+
+.my-background {
+    /* background: fixed linear-gradient(transparent, #fff 90%),
+        fixed repeating-linear-gradient(#efefef,
+            #efefef 1px,
+            transparent 1px,
+            transparent 40px),
+        fixed repeating-linear-gradient(to right,
+            #efefef,
+            #efefef 1px,
+            transparent 1px,
+            transparent 40px) white; */
+    background-image:
+        /* main square grid */
+        linear-gradient(rgba(35, 35, 50, 0.6) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(35, 35, 50, 0.6) 1px, transparent 1px);
+    background-size: 80px 80px;
+    background-image:
+        linear-gradient(rgba(35, 35, 50, 0.6) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(35, 35, 50, 0.6) 1px, transparent 1px),
+        linear-gradient(135deg, #0a0015 0%, #000814 100%);
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-container {
+    perspective: 1000px;
+    will-change: width;
+}
+
+.card {
+    flex: 1;
+    transform-style: preserve-3d;
+    aspect-ratio: 5/7;
+    position: relative;
+    transform-origin: top;
+
+}
+
+#card-1 {
+    border-radius: 20px 0 0 20px;
+}
+
+#card-3 {
+    border-radius: 0 20px 20px 0;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    overflow: hidden;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.card-back {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+.card-back span {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    color: #000814;
+    font-weight: bold;
+}
