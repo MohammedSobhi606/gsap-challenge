@@ -1,5 +1,7 @@
+import End from "./components/End";
 import Hero from "./components/Hero";
 import Intro from "./components/Intro";
+import Jumping from "./components/Jumping";
 import SplitImage from "./components/SplitImage";
 import gsap from "gsap";
 import { ReactLenis } from "lenis/react";
@@ -20,12 +22,13 @@ export default function App() {
 
   return (
     <>
-      {" "}
       <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
-      <main className="my-background min-h-screen text-neutral-400 HPadding maxW ">
+      <main className=" min-h-screen text-neutral-400 HPadding maxW ">
         <Intro />
         <Hero />
         <SplitImage />
+        <Jumping />
+        <End />
       </main>
     </>
   );

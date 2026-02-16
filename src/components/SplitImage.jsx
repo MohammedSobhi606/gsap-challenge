@@ -66,11 +66,15 @@ export default function SplitImage() {
         scale: 0.8,
         gap: 20,
       })
-        .to(".card", {
-          borderRadius: 20,
-          duration: 0.5,
-          ease: "power3.out",
-        })
+        .to(
+          ".card",
+          {
+            borderRadius: 20,
+            duration: 0.05,
+            ease: "power3.out",
+          },
+          "<"
+        )
         .to(".card", {
           rotateY: 180,
           duration: 0.75,
@@ -97,7 +101,7 @@ export default function SplitImage() {
       <div className="card-container  py-16 w-full  flex flex-col gap-8 md:flex-row md:gap-0 max-md:hidden">
         <div className="card" id="card-1">
           <div className="card-front  ">
-            <img src="/public/car1.jpg" alt="car1" />
+            <img src="/car1.jpg" alt="car1" />
           </div>
           <div className="card-back bg-linear-to-br from-teal-200 to-cyan-300 ">
             <span>(01)</span>
@@ -109,7 +113,7 @@ export default function SplitImage() {
         {/* ================== */}
         <div className="card" id="card-2">
           <div className="card-front">
-            <img src="/public/car2.jpg" alt="car1" />
+            <img src="/car2.jpg" alt="car1" />
           </div>
           <div className="card-back bg-linear-to-br from-purple-200 to-pink-300">
             <span>(02)</span>
@@ -121,7 +125,7 @@ export default function SplitImage() {
         {/* ================== */}
         <div className="card " id="card-3">
           <div className="card-front">
-            <img src="/public/car3.jpg" alt="car3" />
+            <img src="/car3.jpg" alt="car3" />
           </div>
           <div className="card-back bg-linear-to-br from-lime-200 to-green-300">
             <span>(03)</span>

@@ -15,7 +15,7 @@
     @apply max-w-7xl mx-auto
 }
 
-.my-background {
+body {
     /* background: fixed linear-gradient(transparent, #fff 90%),
         fixed repeating-linear-gradient(#efefef,
             #efefef 1px,
@@ -92,4 +92,10 @@ img {
     left: 4rem;
     color: #000814;
     font-weight: bold;
+}
+
+.cloneText {
+    position: absolute;
+    left: 0;
+    top: 0;
 }
