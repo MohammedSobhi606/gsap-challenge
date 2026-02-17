@@ -10,8 +10,10 @@ export default function Jumping() {
     const jumpRightBtn = document.getElementById("jump-right-btn");
     const jumpLeftBtn = document.getElementById("jump-left-btn");
     let x = 0;
+
     jumpRightBtn.addEventListener("click", function () {
       gsap.to(".frog", {
+        rotateY: 180,
         motionPath: {
           curviness: 3,
           path: [
@@ -25,6 +27,7 @@ export default function Jumping() {
 
     jumpLeftBtn.addEventListener("click", function () {
       gsap.to(".frog", {
+        rotateY: 0,
         motionPath: {
           curviness: 3,
           path: [
@@ -37,7 +40,7 @@ export default function Jumping() {
     });
   });
   return (
-    <div className="targetSec h-screen mt-16 p-8 flex flex-col gap-8 items-center overflow-hidden ">
+    <div className="targetSec h-screen mt-16 p-8 flex flex-col gap-8 items-center  transform-3d perspective-distant ">
       <h1 className="text-center text-4xl md:text-6xl text-slate-50 ">
         Jumping Effect
       </h1>
@@ -52,13 +55,13 @@ export default function Jumping() {
           id="jump-left-btn"
           className="size-16 rounded-full text-4xl text-black text-center bg-amber-200 hover:bg-amber-700"
         >
-          +
+          &#8592;
         </button>
         <button
           id="jump-right-btn"
-          className="size-16 rounded-full text-4xl text-black text-center bg-amber-200 hover:bg-amber-700"
+          className="size-16 rounded-full text-4xl text-black text-center bg-amber-200 hover:bg-amber-700 "
         >
-          -
+          &#8594;
         </button>
       </div>
     </div>

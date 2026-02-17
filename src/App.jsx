@@ -24,9 +24,9 @@ export default function App() {
     <>
       <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
       <main className=" min-h-screen text-neutral-400 HPadding maxW ">
-        <Intro />
+        {/* <Intro />
         <Hero />
-        <SplitImage />
+        <SplitImage /> */}
         <Jumping />
         <End />
       </main>
