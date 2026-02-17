@@ -31,7 +31,7 @@ export default function End() {
     gsap.to(tl, { progress: 1, duration: 4, ease: "power4.inOut", repeat: -1 });
   });
   return (
-    <div className="end py-32 text-7xl text-slate-50 text-center  ">
+    <div className="end py-32 md:text-7xl text-4xl text-slate-50 text-center  ">
       {" "}
       <h1 className="overflow-hidden transform-3d ">Thank You, ENDED !</h1>{" "}
     </div>
